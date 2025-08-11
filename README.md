@@ -25,8 +25,8 @@ Backend REST sécurisé par JWT pour la gestion d’annonces immobilières (**re
 ### 1) Récupérer le projet
 
 ```bash
-git clone <votre-repo>
-cd <votre-repo>
+git clone https://github.com/jeremie74/projet-3-apirest-chato.git
+cd https://github.com/jeremie74/projet-3-apirest-chato.git
 ```
 
 ### 2) Configurer l’application (si besoin)
