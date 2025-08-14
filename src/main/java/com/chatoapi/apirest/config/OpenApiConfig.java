@@ -15,8 +15,18 @@ public class OpenApiConfig {
         @Bean
         public OpenAPI api() {
                 return new OpenAPI()
-                                .info(new Info().title("Chato API").version("v1"))
-                                // important: ton servlet-path est /api
+                                .info(new Info()
+                                                .title("Chato API")
+                                                .version("v1")
+                                                .description("""
+                                                                Pour tester les routes protégées :
+                                                                1. Faites un appel à l'endpoint **/login** avec vos identifiants.
+                                                                2. Récupérez le `token` JWT dans la réponse.
+                                                                3. Cliquez sur **Authorize** en haut à droite.
+                                                                4. Entrez `Bearer <votre_token>` puis validez.
+
+                                                                Les routes publiques (permitAll) sont testables directement.
+                                                                """))
                                 .addServersItem(new Server().url("/api"))
                                 .components(new Components().addSecuritySchemes("bearerAuth",
                                                 new SecurityScheme()
